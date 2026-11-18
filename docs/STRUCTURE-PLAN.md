@@ -32,6 +32,8 @@ Consumer-specific operating instructions belong in controlled consumer documenta
 
 Actual native Issue Type assignment remains pending account-level API permissions. Descriptive titles do not establish that classification. This permission gap does not prevent preparing documentation or native parent relationships.
 
+For project catalogs, [Work type and Pattern group](classification.md) provide the documented two-axis classification. Work type is a project field; its saved values and the separate native Issue Type must not be confused.
+
 ## Proposals to discuss
 
 The following are candidates, not adopted rules:

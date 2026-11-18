@@ -39,6 +39,8 @@ More: [concepts/](concepts/) — [Skill](concepts/skill.md) · [Assistant](conce
 
 The [Gardener](concepts/gardener.md) is a human-facing entry point using this protocol. Follow [one complete request](docs/request-lifecycle.md) through nested delegation, publication and continuation. The [structure and delivery plan](docs/STRUCTURE-PLAN.md) separates adopted rules from proposals still to discuss.
 
+The [catalog classification guide](docs/classification.md) defines Work type and Pattern group, with selection rules for Concepts, Patterns, Contracts and supporting work.
+
 ## Patterns
 
 | # | Pattern | Status |
