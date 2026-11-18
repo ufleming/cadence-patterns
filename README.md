@@ -27,7 +27,7 @@ Skill                                ← does one job, IN → OUT
 
 | Term | Meaning |
 |---|---|
-| **Skill** | One job with a defined IN/OUT. Knows nothing about who called it or how inputs were selected. |
+| **Skill** | One job with a defined IN/OUT. Does not own caller selection or orchestration logic. |
 | **Assistant** | Owns Skills and/or sub-assistants. Describes only itself and links what it owns. |
 | **Flow** | A recurring process (e.g. backlog refinement). Holds schedule, filters and selection rules — never Skill logic. |
 | **Entry point** | The agent a human talks to; turns one-off requests into delegated work. |
@@ -36,6 +36,8 @@ Skill                                ← does one job, IN → OUT
 | **Queue** | Each Assistant's incoming and outgoing card queues, each with a parallel emergency lane. |
 
 More: [concepts/](concepts/) — [Skill](concepts/skill.md) · [Assistant](concepts/assistant.md) · [Flow](concepts/flow.md) · [Entry point](concepts/entry-point.md) · [Card](concepts/card.md) · [Callback ticket](concepts/callback-ticket.md) · [Queues](concepts/queue.md)
+
+The [Gardener](concepts/gardener.md) is a human-facing entry point using this protocol. Follow [one complete request](docs/request-lifecycle.md) through nested delegation, publication and continuation. The [structure and delivery plan](docs/STRUCTURE-PLAN.md) separates adopted rules from proposals still to discuss.
 
 ## Patterns
 
@@ -49,15 +51,20 @@ More: [concepts/](concepts/) — [Skill](concepts/skill.md) · [Assistant](conce
 | 6 | [Exemplars and top-down descriptions](patterns/06-exemplars-and-top-down.md) | draft |
 | 7 | [Linked elements move through stages together](patterns/07-move-together.md) | draft |
 | 8 | [Assistants communicate through card queues](patterns/08-card-queues.md) | draft |
+| 9 | [Apply the same protocol inside a Skill](patterns/09-nested-delegation.md) | draft |
+| 10 | [Consume a pinned protocol artifact](patterns/10-versioned-protocol.md) | draft |
 
 ## Templates
 
+- [Initiating request card](templates/request-card.md)
 - [Skill card](templates/skill-card.md)
 - [Callback ticket](templates/callback-ticket.md)
 
 ## Versioning
 
 Use a released version as a dependency and link to its patterns instead of copying them. Every release has notes describing what changed in each pattern.
+
+The [release guide](docs/releases.md) explains validation and package preparation. The artifact contains public protocol documents only. Package availability does not itself load instructions, activate agents or demonstrate conformance.
 
 ## Contributing
 
