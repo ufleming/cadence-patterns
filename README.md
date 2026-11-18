@@ -62,3 +62,7 @@ Use a released version as a dependency and link to its patterns instead of copyi
 ## Contributing
 
 Issues and PRs are welcome. A good pattern proposal states the problem, the rule, and a minimal example that works without Cadence.
+
+## License
+
+[Apache License 2.0](LICENSE). Contributions are accepted under the same license.
