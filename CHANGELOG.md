@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Documented Work type and Pattern group for catalog classification, including supporting release, adoption and housekeeping work.
+
 ## 0.1.0 — 2026-11-18
 
 - Clarified owner-prepared Skill cards and initiating request context.
