@@ -14,7 +14,7 @@ Whether a callback is needed is decided by the **caller**, by one test: *does it
 |---|---|
 | Flow | No — fire and forget; the result lives where the Flow will look next run |
 | Assistant mid-plan | Yes — it cannot continue without the answer |
-| Gardener | Optional — may ask the human whether to subscribe to completion or updates |
+| Human entry point | Optional — may ask the human whether to subscribe to completion or updates |
 
 When requested, the callback ticket is **self-contained**:
 

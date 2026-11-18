@@ -2,14 +2,14 @@
 
 **A small, versioned protocol for agent systems: work goes to the owner of a branch, travels down the tree, and the executor receives a filled card.**
 
-These patterns grew inside [Cadence](https://github.com/ufleming) and are used by it as a dependency. They do not depend on GitHub, a message bus, or a specific model: a folder of markdown files and any coding agent (Claude Code, Codex, …) is enough to apply them.
+These patterns grew inside Cadence, an agent system for running projects. They do not depend on GitHub, a message bus, or a specific model: a folder of markdown files and any coding agent (Claude Code, Codex, …) is enough to apply them.
 
 > Status: `0.x` — the patterns are still moving. Expect breaking changes between minor versions until `1.0`.
 
 ## The model in one picture
 
 ```
-Caller (Flow · Gardener · Assistant mid-plan)
+Caller (recurring process · human entry point · agent mid-plan)
    │  request + context   (+ callback: needed or not)
    ▼
 Owner Assistant of the branch        ← single entry point
@@ -29,8 +29,8 @@ Skill                                ← does one job, IN → OUT
 |---|---|
 | **Skill** | One job with a defined IN/OUT. Knows nothing about who called it or how inputs were selected. |
 | **Assistant** | Owns Skills and/or sub-assistants. Describes only itself and links what it owns. |
-| **Flow** | A recurring process (e.g. refinement). Holds schedule, filters and selection rules — never Skill logic. |
-| **Gardener** | The conversational entry point a human talks to; turns one-off requests into delegated work. |
+| **Flow** | A recurring process (e.g. backlog refinement). Holds schedule, filters and selection rules — never Skill logic. |
+| **Entry point** | The agent a human talks to; turns one-off requests into delegated work. |
 | **Card** | The filled template a Skill expects. The only way work reaches a Skill. |
 | **Callback ticket** | A self-contained continuation: context + which Skill to run to resume. |
 
@@ -51,9 +51,9 @@ Skill                                ← does one job, IN → OUT
 - [Skill card](templates/skill-card.md)
 - [Callback ticket](templates/callback-ticket.md)
 
-## Using it as a dependency
+## Versioning
 
-Cadence packages reference a released version of this repo and link to its patterns instead of copying them. Releases carry release notes describing what changed in each pattern.
+Use a released version as a dependency and link to its patterns instead of copying them. Every release has notes describing what changed in each pattern.
 
 ## Contributing
 
