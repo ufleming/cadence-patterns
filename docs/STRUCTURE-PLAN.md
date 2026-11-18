@@ -14,19 +14,23 @@ Consumer-specific operating instructions belong in controlled consumer documenta
 
 ## Delivery checklist
 
-- [ ] Align concepts and owner-mediated card preparation.
-- [ ] Describe nested requests and per-call callback decisions.
-- [ ] Separate result storage, continuation and progress updates.
-- [ ] Describe inbound/outbound workers, correlation and attributed history.
-- [ ] Retain separate requests and execute them in queue order.
-- [ ] Define Gardener-only Emergency as the next slot, without implied active interruption.
-- [ ] Classify existing issues and verify their native hierarchy.
-- [ ] Build and inspect a versioned public document artifact.
-- [ ] Review and merge the exact revision; publish release separately from consumer adoption.
+- [x] Align concepts and owner-mediated card preparation.
+- [x] Describe nested requests and per-call callback decisions.
+- [x] Separate result storage, continuation and progress updates.
+- [x] Describe inbound/outbound workers, correlation and attributed history.
+- [x] Retain separate requests and execute them in queue order.
+- [x] Define Gardener-only Emergency as the next slot, without implied active interruption.
+- [x] Verify native issue hierarchy and assignees.
+- [ ] Apply the intended native Issue Types after account permission is available.
+- [x] Build and inspect a versioned public document artifact.
+- [x] Review and merge the protocol documentation through a pull request.
+- Release publication is tracked in [Release 0.1.0](https://github.com/ufleming/cadence-patterns/issues/10); consumer adoption remains separate.
 
 ## Issue model
 
 **Protocol** is the root, **Concept** defines vocabulary, **Pattern** defines a reusable rule, **Contract** defines a card/template, and **Release** tracks a versioned delivery. These describe protocol elements, not deployed agents. Reuse existing issues. A pattern belongs under its principal concept; a contract belongs under the concept it serves; a release belongs under the root. Cross-references describe other relationships.
+
+Actual native Issue Type assignment remains pending account-level API permissions. Descriptive titles do not establish that classification. This permission gap does not prevent preparing documentation or native parent relationships.
 
 ## Proposals to discuss
 
