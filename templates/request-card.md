@@ -15,6 +15,13 @@
 
 - <Earlier request, result or decision and its relevance.>
 
+## Next consumer, when known
+
+- Next Assistant, Skill or Flow: <declared reference, or unknown>
+- Expected downstream inputs: <accessible task/contract reference, or unknown>
+
+Use this to [help the next assistant](../patterns/11-help-the-next-assistant.md). Retain relevant observations encountered during the current task; do not start separate research to fill optional downstream context. This does not select or authorize a new next step.
+
 ## Result and return
 
 - Result destination: <where the actual outcome belongs>

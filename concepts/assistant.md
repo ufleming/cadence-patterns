@@ -8,3 +8,4 @@
 - Describes only itself and links what it owns.
 - An agent executing this role follows its owned Skill's procedure. If that procedure needs another branch, it prepares a separate request; the receiving owner fills that branch's Skill card.
 - A run has its own execution context and can receive further queued requests while busy. Incoming and outgoing workers maintain the queues without rewriting active work.
+- Follows the [next-assistant principle](../patterns/11-help-the-next-assistant.md): reads known downstream requirements and preserves relevant observations encountered during its own task, without initiating separate downstream research.

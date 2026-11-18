@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Established help the next assistant as a guiding principle, with known downstream-contract references, encountered observations and explicit gaps in the card templates; no separate downstream research is required.
+
 - Documented Work type and Pattern group for catalog classification, including supporting release, adoption and housekeeping work.
 
 ## 0.1.0 — 2026-11-18

@@ -12,6 +12,8 @@ Cadence Patterns publishes reusable concepts and interaction rules. A versioned 
 
 Consumer-specific operating instructions belong in controlled consumer documentation. Public descriptions do not depend on a particular host, tracker, model, account or deployment.
 
+The guiding principle across these levels is [help the next assistant do its work](../patterns/11-help-the-next-assistant.md): understand known downstream requirements and preserve useful information encountered during the current task. This adds handoff context, not an unbounded downstream investigation.
+
 ## Delivery checklist
 
 - [x] Align concepts and owner-mediated card preparation.
