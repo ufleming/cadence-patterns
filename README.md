@@ -33,6 +33,9 @@ Skill                                ← does one job, IN → OUT
 | **Entry point** | The agent a human talks to; turns one-off requests into delegated work. |
 | **Card** | The filled template a Skill expects. The only way work reaches a Skill. |
 | **Callback ticket** | A self-contained continuation: context + which Skill to run to resume. |
+| **Queue** | Each Assistant's incoming and outgoing card queues, each with a parallel emergency lane. |
+
+More: [concepts/](concepts/) — [Skill](concepts/skill.md) · [Assistant](concepts/assistant.md) · [Flow](concepts/flow.md) · [Entry point](concepts/entry-point.md) · [Card](concepts/card.md) · [Callback ticket](concepts/callback-ticket.md) · [Queues](concepts/queue.md)
 
 ## Patterns
 
@@ -41,10 +44,11 @@ Skill                                ← does one job, IN → OUT
 | 1 | [Single entry through the owner](patterns/01-single-entry-through-owner.md) | draft |
 | 2 | [Work reaches a Skill only as a card](patterns/02-skill-card.md) | draft |
 | 3 | [Callback is a continuation, not a notification](patterns/03-callback-as-continuation.md) | draft |
-| 4 | Skill does only its job; selection belongs to the caller | planned |
-| 5 | Every element describes only itself | planned |
-| 6 | Exemplars and top-down descriptions | planned |
-| 7 | Linked elements move through stages together | planned |
+| 4 | [Skill does only its job; selection belongs to the caller](patterns/04-skill-does-only-its-job.md) | draft |
+| 5 | [Every element describes only itself](patterns/05-describes-only-itself.md) | draft |
+| 6 | [Exemplars and top-down descriptions](patterns/06-exemplars-and-top-down.md) | draft |
+| 7 | [Linked elements move through stages together](patterns/07-move-together.md) | draft |
+| 8 | [Assistants communicate through card queues](patterns/08-card-queues.md) | draft |
 
 ## Templates
 
