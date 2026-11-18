@@ -4,6 +4,10 @@
 
 These patterns grew inside Cadence, an agent system for running projects. They do not depend on GitHub, a message bus, or a specific model: a folder of markdown files and any coding agent (Claude Code, Codex, …) is enough to apply them.
 
+## Guiding principle
+
+**Help the next assistant do its work.** Understand its expected inputs when the next step is known, and preserve useful information encountered during your own task. Pass relevant facts and sources with the result; leave genuinely missing information for the next participant to obtain. This does not require separate downstream research or change the current task's required outputs. The [handoff pattern](patterns/11-help-the-next-assistant.md) explains how this applies to owners, Flows and cards.
+
 > Status: `0.x` — the patterns are still moving. Expect breaking changes between minor versions until `1.0`.
 
 ## The model in one picture
@@ -55,6 +59,7 @@ The [catalog classification guide](docs/classification.md) defines Work type and
 | 8 | [Assistants communicate through card queues](patterns/08-card-queues.md) | draft |
 | 9 | [Apply the same protocol inside a Skill](patterns/09-nested-delegation.md) | draft |
 | 10 | [Consume a pinned protocol artifact](patterns/10-versioned-protocol.md) | draft |
+| 11 | [Help the next assistant do its work](patterns/11-help-the-next-assistant.md) | draft |
 
 ## Templates
 

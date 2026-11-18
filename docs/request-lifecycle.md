@@ -2,6 +2,8 @@
 
 A request reaches a Skill through its owning Assistant. The result has a destination; a callback is an optional continuation for a specific caller.
 
+At every handoff, [help the next assistant do its work](../patterns/11-help-the-next-assistant.md). Read the known next participant's accessible task/contract at intake. Preserve relevant information encountered during the current task with references and explicit unknowns; collecting missing downstream information remains the next participant's work unless it is already required by the current task.
+
 ```mermaid
 flowchart TD
     F[Flow selects items and context] --> R[Branch owner receives request]
