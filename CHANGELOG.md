@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.1.0 — 2026-11-18
 
 - Clarified owner-prepared Skill cards and initiating request context.
 - Added Gardener as an entry-point instance and Emergency authority.

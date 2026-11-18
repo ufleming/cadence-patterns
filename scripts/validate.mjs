@@ -8,7 +8,7 @@ assert.equal(pkg.version,manifest.protocolVersion);
 const files=['README.md','CHANGELOG.md',...manifest.concepts,...manifest.patterns,...manifest.templates,...fs.readdirSync(path.join(root,'docs')).filter(n=>n.endsWith('.md')).map(n=>'docs/'+n)];
 assert.equal(new Set(files).size,files.length);
 let links=0;
-for(const name of files){const body=fs.readFileSync(path.join(root,name),'utf8');assert(!/cadence-patterns-internal|cadence-next#|PVT_|[A-Z]:[\\/]|\.private\./i.test(body),`Restricted reference in ${name}`);for(const m of body.matchAll(/\]\(([^)]+)\)/g)){const ref=m[1].split('#')[0];if(!ref||/^[a-z]+:/i.test(ref))continue;assert(fs.existsSync(path.resolve(root,path.dirname(name),decodeURIComponent(ref))),`Broken link ${name}: ${ref}`);links++;}}
+for(const name of files){const body=fs.readFileSync(path.join(root,name),'utf8');assert(!/cadence-patterns-internal|cadence-next#|PVT_|(?:^|[^A-Za-z])[A-Z]:[\\/]|\.private\./i.test(body),`Restricted reference in ${name}`);for(const m of body.matchAll(/\]\(([^)]+)\)/g)){const ref=m[1].split('#')[0];if(!ref||/^[a-z]+:/i.test(ref))continue;assert(fs.existsSync(path.resolve(root,path.dirname(name),decodeURIComponent(ref))),`Broken link ${name}: ${ref}`);links++;}}
 assert(fs.readFileSync(path.join(root,'concepts/queue.md'),'utf8').includes('Only the [Gardener]'));
 assert(fs.readFileSync(path.join(root,'patterns/08-card-queues.md'),'utf8').includes('Keep later requests separate'));
 console.log(JSON.stringify({documents:files.length,relativeLinks:links,version:pkg.version,publicBoundary:'passed',status:'passed'}));
