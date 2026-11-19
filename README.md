@@ -2,7 +2,7 @@
 
 **A small, versioned protocol for agent systems: work goes to the owner of a branch, travels down the tree, and the executor receives a filled card.**
 
-These patterns grew inside Cadence, an agent system for running projects. They do not depend on GitHub, a message bus, or a specific model: a folder of markdown files and any coding agent (Claude Code, Codex, …) is enough to apply them.
+These patterns grew inside Cadence, an agent system for running projects. They do not depend on GitHub, a tracker, a message bus, or a specific model: a folder of markdown files and any coding agent (Claude Code, Codex, …) is enough to apply them. Cards and queues are defined by structure, not storage; tickets are a recommended medium, not a requirement.
 
 ## Guiding principle
 
@@ -39,11 +39,12 @@ Skill                                ← does one job, IN → OUT
 | **Callback ticket** | A self-contained continuation: context + which Skill to run to resume. |
 | **Queue** | Each Assistant's incoming and outgoing card queues, each with a parallel emergency lane. |
 | **Core behavior** | What every agent built on the foundation inherits: card handling, ownership, callbacks. |
-| **Publisher** | The single, tool-agnostic writer to the shared tracker, configured per project. |
+| **Publisher** | The single, tool-agnostic writer to the shared record (usually a tracker), configured per project. |
+| **Layer** | One ordered source of conduct, from protocol patterns up to the prompt; each adds to the ones below and never contradicts them. |
 
-More: [concepts/](concepts/) — [Skill](concepts/skill.md) · [Assistant](concepts/assistant.md) · [Flow](concepts/flow.md) · [Entry point](concepts/entry-point.md) · [Card](concepts/card.md) · [Callback ticket](concepts/callback-ticket.md) · [Queues](concepts/queue.md) · [Core behavior](concepts/core-behavior.md) · [Publisher](concepts/publisher.md)
+More: [concepts/](concepts/) — [Skill](concepts/skill.md) · [Assistant](concepts/assistant.md) · [Flow](concepts/flow.md) · [Entry point](concepts/entry-point.md) · [Card](concepts/card.md) · [Callback ticket](concepts/callback-ticket.md) · [Queues](concepts/queue.md) · [Core behavior](concepts/core-behavior.md) · [Layer](concepts/layer.md) · [Publisher](concepts/publisher.md)
 
-The [Gardener](concepts/gardener.md) is a human-facing entry point using this protocol. Follow [one complete request](docs/request-lifecycle.md) through nested delegation, publication and continuation. The [structure and delivery plan](docs/STRUCTURE-PLAN.md) separates adopted rules from proposals still to discuss.
+The [Gardener](concepts/gardener.md) is a human-facing entry point using this protocol; it also creates and maintains Assistants, Skills and Flows through the implementation core. Follow [one complete request](docs/request-lifecycle.md) through nested delegation, publication and continuation, and [one assistant](docs/assistant-lifecycle.md) from creation to its first card. The [structure and delivery plan](docs/STRUCTURE-PLAN.md) separates adopted rules from proposals still to discuss.
 
 The [catalog classification guide](docs/classification.md) defines Work type and Pattern group, with selection rules for Concepts, Patterns, Contracts and supporting work.
 
@@ -65,12 +66,17 @@ The [catalog classification guide](docs/classification.md) defines Work type and
 | 12 | [Conflicts resolve toward the core](patterns/12-conflicts-resolve-toward-the-core.md) | draft |
 | 13 | [Write through the Publisher](patterns/13-write-through-the-publisher.md) | draft |
 | 14 | [Two audiences](patterns/14-two-audiences.md) | draft |
+| 15 | [Rule provenance](patterns/15-rule-provenance.md) | draft |
+| 16 | [State lives outside the conversation](patterns/16-state-outside-the-conversation.md) | draft |
+| 17 | [Declared authority](patterns/17-declared-authority.md) | draft |
 
 ## Templates
 
 - [Initiating request card](templates/request-card.md)
 - [Skill card](templates/skill-card.md)
 - [Callback ticket](templates/callback-ticket.md)
+- [Assistant description](templates/assistant.md)
+- [Flow description](templates/flow.md)
 
 ## Versioning
 
@@ -80,7 +86,7 @@ The [release guide](docs/releases.md) explains validation and package preparatio
 
 ## Contributing
 
-Issues and PRs are welcome. A good pattern proposal states the problem, the rule, and a minimal example that works without Cadence.
+Issues and PRs are welcome. A good pattern proposal states the problem, the rule, what breaks without it, and a minimal example that works without Cadence.
 
 ## License
 

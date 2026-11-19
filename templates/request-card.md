@@ -24,7 +24,7 @@ Apply [reasonable sufficiency](../patterns/11-reasonable-sufficiency.md): pass w
 
 ## Result and return
 
-- Result destination: `<where the actual outcome belongs; shared-tracker writes go through the Publisher>`
+- Result destination: `<where the actual outcome belongs; shared-record writes go through the Publisher>`
 - Completion callback: `<none, or recipient and predeclared continuation>`
 - Progress updates: `<off by default, or requested events>`
 - Emergency: `<ordinary by default; Gardener-marked only>`

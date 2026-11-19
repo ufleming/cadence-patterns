@@ -2,6 +2,10 @@
 
 **Every element links to an exemplar of its kind, and every description reads from a one-sentence idea down to details.**
 
+## Problem
+
+Without an exemplar, each new element copies whichever neighbour its author happened to see, and layouts drift apart. A description that starts with details hides its idea: humans stop reading, and agents must read everything to find the purpose.
+
 ## Rule
 
 - Keep one polished exemplar per element type; every other element links to it.

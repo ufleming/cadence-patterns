@@ -4,20 +4,20 @@
 
 ## Problem
 
-Agents accumulate instructions from several layers: the foundation, a process, a project, a card, a one-off prompt. Sooner or later one of them says something that breaks card handling, ownership or callbacks — for example "call that Skill directly" or "always wake the caller". If every agent resolves such conflicts its own way, the protocol stops being predictable.
+Agents accumulate instructions from several [layers](../concepts/layer.md): protocol patterns, the implementation core, the entry point, the project, the card, a one-off prompt. Sooner or later one of them says something that breaks card handling, ownership or callbacks — for example "call that Skill directly" or "always wake the caller". If every agent resolves such conflicts its own way, the protocol stops being predictable.
 
 ## Rule
 
-1. Every agent built on the foundation inherits the core: card handling, ownership and callbacks.
+1. Every agent built on the foundation inherits the core: card handling, ownership and callbacks. The core is held by the two lowest layers, protocol patterns and the implementation core.
 2. Higher layers **refine** the core (add fields, choose destinations, set limits). That is not a conflict.
-3. An instruction that **contradicts** the core loses. The agent follows the core and notes the conflict in its result, so the instruction's owner can fix it.
+3. An instruction that **contradicts** the core loses. The agent follows the core and notes the conflict in its result, naming both rules and their layers ([rule provenance](15-rule-provenance.md)), so the instruction's owner can fix it.
 4. Core behavior is **verifiable**: each layer has smoke checks, adds its own set and inherits the sets below it. Smoke runs for the element types involved, regardless of what changed.
 
 | Layer | Adds | Smoke checks |
 |---|---|---|
-| Foundation | the core itself | core set |
-| Process / project | its own conventions | core set + layer set |
-| Individual agent | its role and Skills | all inherited sets + its own |
+| Protocol patterns + implementation core | the core itself | core set |
+| Entry point / project | its own conventions | core set + layer set |
+| Card | the element's role, Skills and authority; the current task | all inherited sets + its own |
 
 ## Example
 

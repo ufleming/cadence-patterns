@@ -2,7 +2,7 @@
 
 A request reaches a Skill through its owning Assistant. The result has a destination; a callback is an optional continuation for a specific caller.
 
-At every handoff, apply [reasonable sufficiency](../patterns/11-reasonable-sufficiency.md). Read the known next participant's accessible task/contract at intake. Preserve relevant information encountered during the current task with references and explicit unknowns; collecting missing downstream information remains the next participant's work unless it is already required by the current task. Every written result has a human part and an agent block ([two audiences](../patterns/14-two-audiences.md)); shared-tracker writes go through the [Publisher](../concepts/publisher.md).
+At every handoff, apply [reasonable sufficiency](../patterns/11-reasonable-sufficiency.md). Read the known next participant's accessible task/contract at intake. Preserve relevant information encountered during the current task with references and explicit unknowns; collecting missing downstream information remains the next participant's work unless it is already required by the current task. Every written result has a human part and an agent block ([two audiences](../patterns/14-two-audiences.md)); shared-record writes go through the [Publisher](../concepts/publisher.md).
 
 ```mermaid
 flowchart TD

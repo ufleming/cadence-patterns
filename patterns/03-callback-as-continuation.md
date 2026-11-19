@@ -24,7 +24,7 @@ The **caller predeclares** the continuation. The receiving owner prepares the Sk
 - the Skill to run on arrival;
 - a link to the original request.
 
-On arrival the caller validates the result and invokes the continuation through its normal owner-mediated route. State lives in the ticket rather than relying on remembered conversation.
+On arrival the caller validates the result and invokes the continuation through its normal owner-mediated route. State lives in the ticket rather than relying on remembered conversation; the executor records its own progress the same way ([16](16-state-outside-the-conversation.md)).
 
 ## Result storage and progress
 

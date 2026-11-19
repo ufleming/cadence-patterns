@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.3.0 — 2026-11-19
+
+Patterns are the primary education every generated Skill, Assistant and Flow receives. Each new pattern states what breaks without it.
+
+- New concept **Layer**: the ordered sources of conduct — protocol patterns, implementation core, entry point, project, card, prompt. Each layer adds and never contradicts the ones below; the core (layers 1–2) wins conflicts. Core behavior and pattern 12 now refer to it; pattern 12's smoke table follows the layer names.
+- New **pattern 15 "Rule provenance"**: an assistant can name the rule it followed and its layer; a layer stamp records the sources a generated assistant was built from.
+- New **pattern 16 "State lives outside the conversation"**: decisions, progress and the stop point are recorded at the item, at each meaningful step, and a resumed session continues from the record.
+- New **pattern 17 "Declared authority"**: on its own / with confirmation (and who confirms) / never, in the element's own description; undeclared means with confirmation; higher layers may narrow, not widen. Pattern 5 lists declared authority among what an Assistant describes.
+- **Gardener** concept extended: besides routing, it creates and maintains Assistants, Skills and Flows through the implementation core, and may have child Gardeners for branches.
+- New templates: **Assistant description** (purpose, owner, entry, owned elements, declared authority, state, layer stamp) and **Flow description** (entry and exit, selection, stages, what moves together).
+- **Medium-agnostic cards**: a card or queue may live in a tracker issue, a file or a message; structure matters, not storage. Tickets are recommended, not required. The Publisher writes to the "shared record" (in the common case a tracker); pattern 13's rule is unchanged.
+- New worked example **One assistant from creation to its first card** (`docs/assistant-lifecycle.md`), with checks that double as a smoke scenario.
+- Patterns 6 and 7 gained a Problem section. Pattern 3 links pattern 16.
+- Structure plan: native Issue Types replaced by the project Work type field plus title prefixes (revisit at public launch); catalog issues are never closed; adopted proposals marked.
+- Validation also checks that every template is in the manifest and that patterns from 15 on have a "Without it" section.
+
 ## 0.2.1 — 2026-11-19
 
 Packaging only; concepts, patterns and templates are unchanged from 0.2.0.

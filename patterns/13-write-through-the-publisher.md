@@ -1,10 +1,10 @@
 # 13. Write through the Publisher
 
-**All writes to the shared tracker go through one writer, the [Publisher](../concepts/publisher.md). It is tool-agnostic and configured per project.**
+**All writes to the shared record — in the common case, a tracker — go through one writer, the [Publisher](../concepts/publisher.md). It is tool-agnostic and configured per project.**
 
 ## Problem
 
-When every agent writes to the tracker itself, each one has to learn the tool, its fields and the project's conventions. Writes drift in shape, duplicates appear, and switching to another tool means retraining everyone.
+When every agent writes to the shared record itself, each one has to learn the tool, its fields and the project's conventions. Writes drift in shape, duplicates appear, and switching to another tool means retraining everyone.
 
 ## Rule
 
@@ -20,6 +20,6 @@ A reviewer Assistant finishes its review and sends the Publisher a card: post th
 
 ## Limits
 
-The pattern does not choose a tool, transport or permissions model. Moving to another tool means reconfiguring the Publisher, not its callers.
+The pattern does not choose a tool, medium, transport or permissions model. Moving to another tool — or from a tracker to files — means reconfiguring the Publisher, not its callers.
 
 See [callback as continuation](03-callback-as-continuation.md) and [two audiences](14-two-audiences.md).

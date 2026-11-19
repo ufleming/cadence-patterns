@@ -18,7 +18,7 @@
 `<format and destination of OUT>`
 
 - Layout: human part (simple → complex, only what a human needs) + collapsed agent block of the agent's own structure — [two audiences](../patterns/14-two-audiences.md).
-- Shared-tracker writes go through the [Publisher](../concepts/publisher.md), with a result marker for the [soft duplicate check](../concepts/queue.md#soft-duplicate-check): `<marker>`.
+- Shared-record writes go through the [Publisher](../concepts/publisher.md), with a result marker for the [soft duplicate check](../concepts/queue.md#soft-duplicate-check): `<marker>`.
 
 ## Reasonable sufficiency
 
