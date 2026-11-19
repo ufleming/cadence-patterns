@@ -1,1 +1,30 @@
-{"name":"@ufleming/cadence-patterns","version":"0.2.0","private":true,"description":"Public protocol concepts, patterns and card templates","license":"Apache-2.0","files":["README.md","CHANGELOG.md","LICENSE","manifest.json","concepts/","patterns/","templates/","docs/","scripts/validate.mjs"],"scripts":{"test":"node scripts/validate.mjs","prepack":"node scripts/validate.mjs"}}
+{
+  "name": "@ufleming/cadence-patterns",
+  "version": "0.2.0",
+  "private": false,
+  "description": "Public protocol concepts, patterns and card templates",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ufleming/cadence-patterns.git"
+  },
+  "files": [
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "manifest.json",
+    "concepts/",
+    "patterns/",
+    "templates/",
+    "docs/",
+    "scripts/validate.mjs"
+  ],
+  "scripts": {
+    "test": "node scripts/validate.mjs",
+    "prepack": "node scripts/validate.mjs",
+    "verify:registry": "node scripts/verify-registry.mjs"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
+}
