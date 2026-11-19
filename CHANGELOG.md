@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.1 — 2026-11-19
+
+Packaging only; concepts, patterns and templates are unchanged from 0.2.0.
+
+- Published to GitHub Packages as `@ufleming/cadence-patterns` (`publishConfig.registry` `https://npm.pkg.github.com`), with a release workflow that validates the tag, publishes the checked archive and verifies registry integrity.
+- The package inherits this repository's visibility (public). The release check now asserts that the package visibility equals the repository visibility instead of assuming private. Installing from GitHub Packages still requires a token with `read:packages`.
+
 ## 0.2.0 — 2026-11-18
 
 - **Pattern 11 is now the guiding principle "Reasonable sufficiency"** (file renamed from `11-help-the-next-assistant.md`): include what the next participant cannot work without and what it will likely need when already at hand and cheap; exclude guesses and what costs more to gather than to find later. Two checks (lower and upper bound). Added "Prepare the foreseeable next step" with an explicit `prepared for: <step>` mark — a recommendation, not an order, with no separate downstream research.

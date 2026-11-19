@@ -8,7 +8,7 @@ npm pack --dry-run
 npm pack
 ```
 
-`package.json` is private to prevent accidental npm-registry publication. `npm pack` still creates an installable archive. No registry or registry credentials have been selected.
+Releases are published to GitHub Packages as `@ufleming/cadence-patterns` by the release workflow: a published GitHub Release `vX.Y.Z` must match `package.json`, the archive is tested and packed, published, and its registry integrity is compared with the packed archive. The package inherits this repository's visibility. Consumers install it with a token that can read packages from `https://npm.pkg.github.com`; `npm pack` still produces the same archive for offline review.
 
 The release owner reviews the exact revision, verifies archive contents and records its SHA-256 digest. A GitHub Release can distribute that archive with its version and release notes. Artifact preparation is separate from release publication and consumer adoption.
 
