@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
     inputs:
       tag:
-        description: Existing release tag whose protocol content is published (e.g. v0.2.0)
+        description: Existing release tag whose protocol content is published (e.g. v0.2.1)
         required: true
 permissions:
   contents: read
@@ -44,12 +44,14 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/verify-registry.mjs .tmp/*.tgz
-      - name: Verify published package remains private
+      - name: Verify package visibility follows the repository
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPOSITORY_VISIBILITY: ${{ github.event.repository.visibility }}
         run: |
-          gh api users/ufleming/packages/npm/cadence-patterns --jq '{name,visibility,package_type}' > .tmp/patterns-visibility.json
-          node -e 'const p=require("./.tmp/patterns-visibility.json"); if(p.visibility!=="private"||p.package_type!=="npm"||p.name!=="cadence-patterns") throw Error("Unexpected package visibility or identity"); console.log(JSON.stringify(p));'
+          gh api users/ufleming/packages/npm/cadence-patterns --jq '{name,visibility,package_type,repository:.repository.full_name}' > .tmp/patterns-visibility.json
+          cat .tmp/patterns-visibility.json
+          node -e 'const p=require("./.tmp/patterns-visibility.json"); const want=process.env.REPOSITORY_VISIBILITY; if(!want||p.visibility!==want||p.package_type!=="npm"||p.name!=="cadence-patterns"||p.repository!=="ufleming/cadence-patterns") throw Error("Unexpected package visibility or identity: "+JSON.stringify(p)+" expected visibility "+want); console.log("visibility ok: "+p.visibility);'
       - uses: actions/upload-artifact@v4
         with:
           name: release-evidence
