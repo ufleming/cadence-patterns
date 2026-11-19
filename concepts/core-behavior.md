@@ -8,7 +8,7 @@
 
 ## Layers
 
-Agents are built in layers: a foundation, then process or project layers, then the individual agent's own instructions. Each layer **inherits** the core and may **add** behavior; none may remove it. A freshly created agent with no extra instructions already shows the core behavior.
+Agents are built in ordered [layers](layer.md): protocol patterns, the implementation core, the entry point, the project, the card and the prompt. The core lives in the first two. Each higher layer **inherits** the core and may **add** behavior; none may remove it. A freshly created agent with no extra instructions already shows the core behavior.
 
 ## Verification
 

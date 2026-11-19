@@ -7,6 +7,10 @@
 - An initiating [request card](../templates/request-card.md) carries intent and context down the ownership chain. Only the Skill's immediate owner prepares its actual input card.
 - Explicit related-card references let the incoming worker assemble earlier decisions and results. Related requests remain separate and are not silently merged.
 
+## Medium
+
+A card is defined by its structure, not by where it is stored. It may live in a tracker issue, a file or a message; what matters is that its fields are present, it has a stable reference and its owner can find it. Tickets are a recommended medium — they give a stable link, history and a place humans already look — but not a requirement: a system without a tracker applies the same cards and [queues](queue.md) in whatever medium it has.
+
 Template: [templates/skill-card.md](../templates/skill-card.md)
 
 A card can identify a known next consumer and its expected-input contract. Results retain relevant observations encountered during the current task, with sources and explicit gaps. This optional context follows [reasonable sufficiency](../patterns/11-reasonable-sufficiency.md), including an optional `prepared for: <step>` section; it does not create extra research obligations.

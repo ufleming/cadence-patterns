@@ -12,4 +12,4 @@ When descriptions overlap, one change has to be made in several places, and soon
 |---|---|---|
 | Skill | job, diagram, input/output, its card | — |
 | Flow | schedule, selection, the card it sends | owner Assistant |
-| Assistant | itself, its role | the Skills and sub-assistants it owns |
+| Assistant | itself, its role, its [declared authority](17-declared-authority.md) | the Skills and sub-assistants it owns |

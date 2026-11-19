@@ -2,6 +2,10 @@
 
 **A Flow, the Skills it launches and the Assistants that own them pass each stage as one batch.**
 
+## Problem
+
+An element promoted alone looks ready but cannot work: a Flow marked ready launches a Skill whose owner is not, and the gap shows only when a run fails.
+
 ## Rule
 
 - An element is ready only when everything that takes part in it is ready.

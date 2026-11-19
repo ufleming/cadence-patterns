@@ -7,6 +7,8 @@
 | **Incoming** | work and callbacks addressed to the Assistant | urgent cards handled before the normal queue |
 | **Outgoing** | cards the Assistant sends down or back | urgent cards it sends |
 
+A queue, like a card, is independent of its medium: a tracker view, a folder or a message channel can hold it.
+
 ## Incoming and outgoing workers
 
 An incoming worker retains each request, correlates it with earlier cards and decisions, and assembles attributed context while the executor is busy. An outgoing worker handles requests, results and requested callbacks. A run can assign these responsibilities to separate workers in its own chat or equivalent execution context; no particular host is required.
