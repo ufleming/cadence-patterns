@@ -15,6 +15,7 @@ Direct calls block the caller and make every agent depend on the others being av
 - Correlate new cards with relevant history and decisions; preserve the sources of added context.
 - Keep later requests separate, even if they concern the active item. Do not silently merge requests or overwrite active instructions. Each keeps its own result and callback obligations.
 - Only the Gardener can mark Emergency. It becomes next before ordinary queued work; this does not imply interruption of the active operation.
+- Before writing a result, apply the [soft duplicate check](../concepts/queue.md#soft-duplicate-check): no result with your marker → write it; one exists → merge quietly. No hard locks.
 - Do not send unsolicited `pending` updates. Completion callbacks and explicitly requested progress subscriptions are distinct.
 
 ## Example
@@ -23,4 +24,4 @@ A Flow requests refinement of five items. A Gardener then requests more work on 
 
 ## Limits
 
-The queue pattern does not by itself supply duplicate-effect prevention, restart recovery or fairness under sustained Emergency load. Those policies remain explicit consumer responsibilities and candidates for further patterns.
+The soft duplicate check prevents visible duplicate results; it is not a lock and does not guarantee exactly-once effects. Restart recovery and fairness under sustained Emergency load remain explicit consumer responsibilities and candidates for further patterns.

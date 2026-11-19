@@ -20,11 +20,11 @@
 - Next Assistant, Skill or Flow: `<declared reference, or unknown>`
 - Expected downstream inputs: `<accessible task/contract reference, or unknown>`
 
-Use this to [help the next assistant](../patterns/11-help-the-next-assistant.md). Retain relevant observations encountered during the current task; do not start separate research to fill optional downstream context. This does not select or authorize a new next step.
+Apply [reasonable sufficiency](../patterns/11-reasonable-sufficiency.md): pass what the receiver cannot work without, plus what you already have and is cheap to pass. Retain relevant observations encountered during the current task; do not start separate research to fill optional downstream context. This does not select or authorize a new next step.
 
 ## Result and return
 
-- Result destination: `<where the actual outcome belongs>`
+- Result destination: `<where the actual outcome belongs; shared-tracker writes go through the Publisher>`
 - Completion callback: `<none, or recipient and predeclared continuation>`
 - Progress updates: `<off by default, or requested events>`
 - Emergency: `<ordinary by default; Gardener-marked only>`

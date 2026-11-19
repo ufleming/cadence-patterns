@@ -4,7 +4,7 @@ Cadence Patterns publishes reusable concepts and interaction rules. A versioned 
 
 | Level | Content | Location |
 | --- | --- | --- |
-| Concept | Skill, Assistant, Flow, Gardener, card, callback, queue | `concepts/` |
+| Concept | Skill, Assistant, Flow, Gardener, card, callback, queue, core behavior, Publisher | `concepts/` |
 | Pattern | Problem, rule, responsibilities, abstract example | `patterns/` |
 | Contract | Reusable human-readable card templates | `templates/` |
 | Worked example | One request through the whole interaction | `docs/request-lifecycle.md` |
@@ -12,7 +12,7 @@ Cadence Patterns publishes reusable concepts and interaction rules. A versioned 
 
 Consumer-specific operating instructions belong in controlled consumer documentation. Public descriptions do not depend on a particular host, tracker, model, account or deployment.
 
-The guiding principle across these levels is [help the next assistant do its work](../patterns/11-help-the-next-assistant.md): understand known downstream requirements and preserve useful information encountered during the current task. This adds handoff context, not an unbounded downstream investigation.
+The guiding principle across these levels is [reasonable sufficiency](../patterns/11-reasonable-sufficiency.md): pass what the next participant cannot work without, plus what you already have and is cheap to pass; prepare a foreseeable next step without separate downstream research. Supporting rules: [core behavior](../concepts/core-behavior.md) wins conflicts ([12](../patterns/12-conflicts-resolve-toward-the-core.md)), shared-tracker writes go through the [Publisher](../concepts/publisher.md) ([13](../patterns/13-write-through-the-publisher.md)), and every written text has [two audiences](../patterns/14-two-audiences.md).
 
 ## Delivery checklist
 
@@ -26,6 +26,7 @@ The guiding principle across these levels is [help the next assistant do its wor
 - [ ] Apply the intended native Issue Types after account permission is available.
 - [x] Build and inspect a versioned public document artifact.
 - [x] Review and merge the protocol documentation through a pull request.
+- [x] 0.2.0: reasonable sufficiency, core behavior, soft duplicate check, Publisher, two audiences.
 - Release publication is tracked in [Release 0.1.0](https://github.com/ufleming/cadence-patterns/issues/10); consumer adoption remains separate.
 
 ## Issue model
@@ -40,7 +41,7 @@ For project catalogs, [Work type and Pattern group](classification.md) provide t
 
 The following are candidates, not adopted rules:
 
-- Stable operation identity, duplicate-effect prevention and restart recovery.
+- Stable operation identity, hard duplicate-effect prevention and restart recovery. (Adopted in 0.2.0: the [soft duplicate check](../concepts/queue.md#soft-duplicate-check); hard locks stay out of scope.)
 - Cancellation, timeouts and failure continuations.
 - Fairness under sustained Emergency traffic.
 - Compatibility between changed card schemas and mixed protocol versions.

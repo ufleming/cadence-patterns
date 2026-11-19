@@ -12,4 +12,4 @@ npm pack
 
 The release owner reviews the exact revision, verifies archive contents and records its SHA-256 digest. A GitHub Release can distribute that archive with its version and release notes. Artifact preparation is separate from release publication and consumer adoption.
 
-Until 1.0, minor versions may break compatibility. Pin exact reviewed releases; mutable main-branch links are discovery references, not version pins. The public artifact excludes consumer configuration and private operational guides.
+Until 1.0, minor versions may break compatibility. For example, 0.2.0 renamed pattern 11's file to `11-reasonable-sufficiency.md`; consumers linking the old path should update when they move their pin. Pin exact reviewed releases; mutable main-branch links are discovery references, not version pins. The public artifact excludes consumer configuration and private operational guides.

@@ -12,7 +12,7 @@ The Assistant executing a Skill prepares a request for the other branch. The rec
 
 Return that result to the immediate caller. That caller remains responsible for completing its own work and reporting to the original caller. The outer request's notification preference does not override this nested relationship.
 
-Apply [help the next assistant](11-help-the-next-assistant.md) at each handoff: read the declared receiver's accessible input contract, retain useful observations encountered in the current task, and return those with sources and honest gaps. This does not require extra research for the receiver or permit inventing its next task.
+Apply [reasonable sufficiency](11-reasonable-sufficiency.md) at each handoff: read the declared receiver's accessible input contract, retain useful observations encountered in the current task, and return those with sources and honest gaps. This does not require extra research for the receiver or permit inventing its next task.
 
 ## Example
 

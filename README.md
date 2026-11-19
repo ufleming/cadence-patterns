@@ -6,7 +6,7 @@ These patterns grew inside Cadence, an agent system for running projects. They d
 
 ## Guiding principle
 
-**Help the next assistant do its work.** Understand its expected inputs when the next step is known, and preserve useful information encountered during your own task. Pass relevant facts and sources with the result; leave genuinely missing information for the next participant to obtain. This does not require separate downstream research or change the current task's required outputs. The [handoff pattern](patterns/11-help-the-next-assistant.md) explains how this applies to owners, Flows and cards.
+**Reasonable sufficiency.** Pass on everything the next participant cannot work without, plus what it will likely need when you already have it and it is cheap to pass. Leave out guesses and anything that costs more to gather than to find later. Two checks: *would they have to come back?* and *does it cost me more than it saves them?* When the next step is foreseeable, prepare what you already have for it, marked `prepared for: <step>`. This helps the next assistant do its work without separate downstream research. See [pattern 11](patterns/11-reasonable-sufficiency.md).
 
 > Status: `0.x` — the patterns are still moving. Expect breaking changes between minor versions until `1.0`.
 
@@ -38,8 +38,10 @@ Skill                                ← does one job, IN → OUT
 | **Card** | The filled template a Skill expects. The only way work reaches a Skill. |
 | **Callback ticket** | A self-contained continuation: context + which Skill to run to resume. |
 | **Queue** | Each Assistant's incoming and outgoing card queues, each with a parallel emergency lane. |
+| **Core behavior** | What every agent built on the foundation inherits: card handling, ownership, callbacks. |
+| **Publisher** | The single, tool-agnostic writer to the shared tracker, configured per project. |
 
-More: [concepts/](concepts/) — [Skill](concepts/skill.md) · [Assistant](concepts/assistant.md) · [Flow](concepts/flow.md) · [Entry point](concepts/entry-point.md) · [Card](concepts/card.md) · [Callback ticket](concepts/callback-ticket.md) · [Queues](concepts/queue.md)
+More: [concepts/](concepts/) — [Skill](concepts/skill.md) · [Assistant](concepts/assistant.md) · [Flow](concepts/flow.md) · [Entry point](concepts/entry-point.md) · [Card](concepts/card.md) · [Callback ticket](concepts/callback-ticket.md) · [Queues](concepts/queue.md) · [Core behavior](concepts/core-behavior.md) · [Publisher](concepts/publisher.md)
 
 The [Gardener](concepts/gardener.md) is a human-facing entry point using this protocol. Follow [one complete request](docs/request-lifecycle.md) through nested delegation, publication and continuation. The [structure and delivery plan](docs/STRUCTURE-PLAN.md) separates adopted rules from proposals still to discuss.
 
@@ -59,7 +61,10 @@ The [catalog classification guide](docs/classification.md) defines Work type and
 | 8 | [Assistants communicate through card queues](patterns/08-card-queues.md) | draft |
 | 9 | [Apply the same protocol inside a Skill](patterns/09-nested-delegation.md) | draft |
 | 10 | [Consume a pinned protocol artifact](patterns/10-versioned-protocol.md) | draft |
-| 11 | [Help the next assistant do its work](patterns/11-help-the-next-assistant.md) | draft |
+| 11 | [Reasonable sufficiency](patterns/11-reasonable-sufficiency.md) — guiding principle | draft |
+| 12 | [Conflicts resolve toward the core](patterns/12-conflicts-resolve-toward-the-core.md) | draft |
+| 13 | [Write through the Publisher](patterns/13-write-through-the-publisher.md) | draft |
+| 14 | [Two audiences](patterns/14-two-audiences.md) | draft |
 
 ## Templates
 

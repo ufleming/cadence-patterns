@@ -9,4 +9,4 @@
 
 Template: [templates/skill-card.md](../templates/skill-card.md)
 
-A card can identify a known next consumer and its expected-input contract. Results retain relevant observations encountered during the current task, with sources and explicit gaps. This optional context follows the [next-assistant principle](../patterns/11-help-the-next-assistant.md); it does not create extra research obligations.
+A card can identify a known next consumer and its expected-input contract. Results retain relevant observations encountered during the current task, with sources and explicit gaps. This optional context follows [reasonable sufficiency](../patterns/11-reasonable-sufficiency.md), including an optional `prepared for: <step>` section; it does not create extra research obligations.
