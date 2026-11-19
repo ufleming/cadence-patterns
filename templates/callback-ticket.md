@@ -23,6 +23,6 @@ Through its owner: `<Assistant>`. The recipient validates the outcome and prepar
 
 `<Relevant observations encountered during the delegated task, with sources and relevance; remaining information not collected. Keep this separate from evidence that required work is complete.>`
 
-Follow the [next-assistant principle](../patterns/11-help-the-next-assistant.md). The executor does not investigate missing downstream information solely to fill this section.
+Follow [reasonable sufficiency](../patterns/11-reasonable-sufficiency.md); a foreseeable next step may be marked `prepared for: <step>`. The executor does not investigate missing downstream information solely to fill this section.
 
 Progress updates are separate and off by default. A completion-only caller is not sent `pending` updates.

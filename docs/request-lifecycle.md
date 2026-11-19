@@ -2,7 +2,7 @@
 
 A request reaches a Skill through its owning Assistant. The result has a destination; a callback is an optional continuation for a specific caller.
 
-At every handoff, [help the next assistant do its work](../patterns/11-help-the-next-assistant.md). Read the known next participant's accessible task/contract at intake. Preserve relevant information encountered during the current task with references and explicit unknowns; collecting missing downstream information remains the next participant's work unless it is already required by the current task.
+At every handoff, apply [reasonable sufficiency](../patterns/11-reasonable-sufficiency.md). Read the known next participant's accessible task/contract at intake. Preserve relevant information encountered during the current task with references and explicit unknowns; collecting missing downstream information remains the next participant's work unless it is already required by the current task. Every written result has a human part and an agent block ([two audiences](../patterns/14-two-audiences.md)); shared-tracker writes go through the [Publisher](../concepts/publisher.md).
 
 ```mermaid
 flowchart TD
@@ -25,7 +25,8 @@ flowchart TD
 2. It sends the items, requested Skill and recurring-launch context to the branch owner, with no outer callback.
 3. The request travels to the Skill's immediate owner, which fills its input card.
 4. During execution the Assistant may request another role's contribution. It decides callback need for that nested call.
-5. Save the overall result where the Flow's next iteration will observe it. No outer callback does not remove nested continuation requirements.
+5. Save the overall result where the Flow's next iteration will observe it, through the Publisher. If a result with the same marker already exists (for example, after a retried run), merge into it quietly instead of adding a second one. No outer callback does not remove nested continuation requirements.
+6. When the item's next stage is foreseeable, the agent block carries a `prepared for: <next Flow or Skill>` section built from material already gathered. The next run treats it as a recommendation.
 
 ## Publishing followed by review
 
