@@ -1,6 +1,6 @@
 {
   "name": "@ufleming/cadence-patterns",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "private": false,
   "description": "Public protocol concepts, patterns and card templates",
   "license": "Apache-2.0",
