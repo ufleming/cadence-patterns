@@ -51,6 +51,30 @@ A Developer's card names QA as the next participant and links QA's expected inpu
 
 If nothing useful for QA comes up, the Developer still supplies its own required result, and QA collects what it needs.
 
+### Example: a collapsed handoff block
+
+In a shared tracker that supports collapsed sections, leave the result visible
+and put compact handoff context underneath it. An example review comment:
+
+```markdown
+The form now saves a draft when the user leaves the page. The offline case
+still needs QA.
+
+<details><summary>Agent details</summary>
+
+- Prepared for: QA review
+- Checked revision: example revision 7
+- Reproduction: edit a draft, disconnect the network, then leave and reopen
+  the page.
+- Known gap: the offline path has not been run.
+
+</details>
+```
+
+Use the destination's required format. Add optional handoff details when they
+help the next participant and are already known. Keep decisions and requests
+that need a person's attention in the visible text.
+
 ## Review the handoff
 
 - Passes: an encountered useful fact with its source; an honest gap; a `prepared for` block built from material already at hand.
