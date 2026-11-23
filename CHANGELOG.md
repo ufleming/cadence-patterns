@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.1
+
+- Show a collapsed handoff block in the reasonable sufficiency pattern.
+
 ## 0.3.0 — 2026-11-19
 
 Patterns are the primary education every generated Skill, Assistant and Flow receives. Each new pattern states what breaks without it.
