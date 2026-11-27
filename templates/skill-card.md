@@ -4,6 +4,9 @@
 
 **Original request:** `<stable reference>` · **Related cards:** `<earlier requests/results and their relevance>`
 
+## Intent
+`<why this run exists, carried from the request; keep it when the how changes>` · [intent first](../patterns/18-intent-first.md)
+
 ## Task
 `<one sentence: what this run must produce>`
 

@@ -69,6 +69,7 @@ The [catalog classification guide](docs/classification.md) defines Work type and
 | 15 | [Rule provenance](patterns/15-rule-provenance.md) | draft |
 | 16 | [State lives outside the conversation](patterns/16-state-outside-the-conversation.md) | draft |
 | 17 | [Declared authority](patterns/17-declared-authority.md) | draft |
+| 18 | [Intent first](patterns/18-intent-first.md) | draft |
 
 ## Templates
 
