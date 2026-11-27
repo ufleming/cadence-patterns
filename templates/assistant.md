@@ -25,6 +25,8 @@ Links only; each owned element describes itself — [pattern 5](../patterns/05-d
 
 Anything not listed requires confirmation — [declared authority](../patterns/17-declared-authority.md).
 
+**Questions to the human:** `<what this Assistant may ask a human for: preferences, decisions, facts in no reachable source, paths or access>` — [ask only what the human holds](../patterns/19-ask-only-what-the-human-holds.md).
+
 ## State
 - Decisions, progress and stop point are recorded at: `<item, result or state record>` — [state outside the conversation](../patterns/16-state-outside-the-conversation.md).
 - Shared-record writes go through the [Publisher](../concepts/publisher.md).

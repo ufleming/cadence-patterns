@@ -70,6 +70,7 @@ The [catalog classification guide](docs/classification.md) defines Work type and
 | 16 | [State lives outside the conversation](patterns/16-state-outside-the-conversation.md) | draft |
 | 17 | [Declared authority](patterns/17-declared-authority.md) | draft |
 | 18 | [Intent first](patterns/18-intent-first.md) | draft |
+| 19 | [Ask the human only what only the human holds](patterns/19-ask-only-what-the-human-holds.md) | draft |
 
 ## Templates
 

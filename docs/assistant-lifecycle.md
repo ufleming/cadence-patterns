@@ -72,5 +72,6 @@ If the first request had said "run the Skill directly and publish right away", t
 | 6 | Resume from the record in a new session | [16](../patterns/16-state-outside-the-conversation.md) |
 | 7 | Callback filled with the actual outcome; no invented next step | [3](../patterns/03-callback-as-continuation.md) |
 | 8 | Contradicting instruction loses; conflict names rules and layers | [12](../patterns/12-conflicts-resolve-toward-the-core.md), [15](../patterns/15-rule-provenance.md) |
+| 9 | Does not ask the human for information it can reach; any question says where it looked | [19](../patterns/19-ask-only-what-the-human-holds.md) |
 
 See [one request through the protocol](request-lifecycle.md) for routing, nested delegation and queues in more detail.
