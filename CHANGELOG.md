@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- New **pattern 18 "Intent first"**: the receiver of any request, human or card, restates the intent, then judges idea and implementation against it separately; answer order intent → strengths → broken how with an alternative → question only if the intent is unclear; proportional; the requester has the last word; replacing the how stays within declared authority.
+- Request and Skill card templates gain an **Intent** field.
+
 ## 0.3.1
 
 - Show a collapsed handoff block in the reasonable sufficiency pattern.

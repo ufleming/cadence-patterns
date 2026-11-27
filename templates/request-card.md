@@ -2,6 +2,10 @@
 
 **From:** `<caller>` · **To:** `<branch owner>`
 
+## Intent
+
+`<Why: the state of the world the requester wants. The receiver may replace the how when it breaks, never the intent.>` See [intent first](../patterns/18-intent-first.md).
+
 ## Requested work
 
 `<Intended operation and declared Skill or capability.>`
