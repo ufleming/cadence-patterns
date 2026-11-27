@@ -1,9 +1,13 @@
 # Changelog
 
-## Unreleased
+## 0.4.0 — 2026-11-27
 
 - New **pattern 18 "Intent first"**: the receiver of any request, human or card, restates the intent, then judges idea and implementation against it separately; answer order intent → strengths → broken how with an alternative → question only if the intent is unclear; proportional; the requester has the last word; replacing the how stays within declared authority.
 - Request and Skill card templates gain an **Intent** field.
+- New **pattern 19 "Ask the human only what only the human holds"**: route each question to whoever is best placed to answer it. Ask the human only for preferences, decisions, priorities and facts in no reachable source; ask yourself first by searching the repository, backlog, history, documents and tools; when information is out of reach, ask for the path or access, not the answer. A question to the human is short, says where the assistant already looked, and its answer is recorded.
+- **Gardener** concept: as the main human-facing entry, it applies pattern 19 before asking the human anything.
+- **Assistant description** template gains a **Questions to the human** line: what this Assistant may ask a human for.
+- Assistant lifecycle smoke checklist gains a check: a new Assistant does not ask the human for information it can reach.
 
 ## 0.3.1
 

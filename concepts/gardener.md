@@ -8,6 +8,8 @@ It receives human intent, resolves enough context to route it, and requests work
 
 The Gardener carries completion and progress-notification preferences. It is the authority for marking a request **Emergency**; queue workers and Skills cannot promote ordinary work themselves.
 
+As the main place where assistants talk to a human, the Gardener [asks the human only what only the human holds](../patterns/19-ask-only-what-the-human-holds.md): it works out from reachable sources what it can, and asks for preferences, decisions and missing paths, saying where it already looked.
+
 ## Creating and maintaining elements
 
 - **Creates** Assistants, Skills and Flows from the protocol's templates ([assistant](../templates/assistant.md), [flow](../templates/flow.md), [skill card](../templates/skill-card.md)) by asking the implementation core to generate them. It does not write their conduct by hand; each generated element inherits the [core behavior](core-behavior.md) and carries a [layer](layer.md) stamp of its sources.

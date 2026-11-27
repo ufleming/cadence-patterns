@@ -25,6 +25,8 @@ Apply both before you hand off:
 
 A small task gets a short handoff. A larger task with a known next step can justify a richer one.
 
+The same holds for questions: do not hand the receiver research you can do yourself — [ask the human only what only the human holds](19-ask-only-what-the-human-holds.md).
+
 ## Help the next assistant
 
 - **Know the next consumer when possible.** Read your own task and required input/output. Also read the next participant's declared task or input contract when the card, the declared Flow or a predeclared continuation supplies it. When it is unknown, record that and do your task; do not invent a successor or scan unrelated workflows.
